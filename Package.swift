@@ -15,13 +15,13 @@ let package = Package(
             targets: ["MobileIdSDKiOS"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/getsentry/sentry-cocoa", .exact("8.32.0")),
-        .package(url: "https://github.com/airbnb/lottie-ios.git", .exact("4.3.4")),
-        .package(url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.4")),
-        .package(url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.0")),
-        .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.1.2")),
-        .package(url: "https://github.com/regulaforensics/DocumentReaderOCRRFID-Swift-Package", from: "7.4.0"),
-        .package(url: "https://github.com/regulaforensics/DocumentReader-Swift-Package", from: "7.4.0"),
+        .package(name: "Sentry", url: "https://github.com/getsentry/sentry-cocoa", .exact("8.32.0")),
+        .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", .exact("4.3.4")),
+        .package(name: "VBDependencyInjector", url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.4")),
+        .package(name: "VBNetworkClient", url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.0")),
+        .package(name: "VBImageProcessor", url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.1.2")),
+        .package(name: "OCRRFID", url: "https://github.com/regulaforensics/DocumentReaderOCRRFID-Swift-Package", from: "7.4.0"),
+        .package(name: "DocumentReader", url: "https://github.com/regulaforensics/DocumentReader-Swift-Package", from: "7.4.0"),
     ],
     targets: [
         .binaryTarget(
@@ -33,13 +33,13 @@ let package = Package(
             name: "MobileIdSDKiOSWrapper",
             dependencies: [
                 .target(name: "MobileIdSDKiOS"),
-                "sentry-cocoa",
-                "lottie-ios",
-                "VBDependencyInjector",
-                "VBNetworkClient",
-                "VBImageProcessor",
-                "DocumentReaderOCRRFID-Swift-Package",
-                "DocumentReader-Swift-Package"
+                .product(name: "Sentry", package: "Sentry"),
+                .product(name: "Lottie", package: "Lottie"),
+                .product(name: "VBDependencyInjector", package: "VBDependencyInjector"),
+                .product(name: "VBNetworkClient", package: "VBNetworkClient"),
+                .product(name: "VBImageProcessor", package: "VBImageProcessor"),
+                .product(name: "OCRRFID", package: "OCRRFID"),
+                .product(name: "DocumentReader", package: "DocumentReader")
             ],
             path: "Sources",
             sources: ["dummy.swift"]
