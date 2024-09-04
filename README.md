@@ -21,8 +21,7 @@ Once you're finished, Xcode will begin downloading and resolving dependencies.
 
 If migrating from a CocoaPods-based project, run `pod deintegrate` to remove CocoaPods from your Xcode project. The CocoaPods-generated .xcworkspace file can safely be deleted afterward. 
 
-If you're adding Document Reader SDK Swift Packages to a project for the first time, ignore this notice.
-
+If you're adding SeamlessMobile SDK Swift Packages to a project for the first time, ignore this notice.
 
 ## Documentation
 
