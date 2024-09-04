@@ -15,7 +15,7 @@ let package = Package(
             targets: ["MobileIdSDKiOSWrapper"]),
     ],
     dependencies: [
-        //.package(name: "sentry-cocoa", url: "https://github.com/getsentry/sentry-cocoa", .exact("8.32.0")),
+        .package(name: "Sentry", url: "https://github.com/getsentry/sentry-cocoa", .exact("8.36.0")),
         .package(name: "Lottie", url: "https://github.com/airbnb/lottie-spm", .exact("4.3.4")),
         .package(name: "VBDependencyInjector", url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.4")),
         .package(name: "VBNetworkClient", url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.0")),
@@ -29,16 +29,11 @@ let package = Package(
             url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.2.1.zip",
             checksum: "709e8beedce6029b439e7d4bb59e1830060b642b96791586c65a6520ca5ba908"
         ),
-        .binaryTarget(
-            name: "Sentry",
-            url: "https://github.com/getsentry/sentry-cocoa/releases/download/8.32.0/Sentry.xcframework.zip",
-            checksum: "780558374b95d370e8b604097f9ccb2cac328fdd18c4b8542a58ece83d2548d2" //Sentry-Static
-        ),
         .target(
             name: "MobileIdSDKiOSWrapper",
             dependencies: [
                 .target(name: "MobileIdSDKiOS"),
-                .target(name: "Sentry"),
+                .product(name: "Sentry", package: "Sentry"),
                 .product(name: "Lottie", package: "Lottie"),
                 .product(name: "VBDependencyInjector", package: "VBDependencyInjector"),
                 .product(name: "VBNetworkClient", package: "VBNetworkClient"),
