@@ -28,6 +28,21 @@ let package = Package(
             name: "MobileIdSDKiOS",
             url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.2.1.zip",
             checksum: "709e8beedce6029b439e7d4bb59e1830060b642b96791586c65a6520ca5ba908"
+        ),
+        .target(
+            name: "MobileIdSDKiOSWrapper",
+            dependencies: [
+                .target(name: "MobileIdSDKiOS"),
+                "sentry-cocoa",
+                "lottie-ios",
+                "VBDependencyInjector",
+                "VBNetworkClient",
+                "VBImageProcessor",
+                "DocumentReaderOCRRFID-Swift-Package",
+                "DocumentReader-Swift-Package"
+            ],
+            path: "Sources",
+            sources: ["dummy.swift"]
         )
     ],
     swiftLanguageVersions: [.v5]
