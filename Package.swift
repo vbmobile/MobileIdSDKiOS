@@ -38,7 +38,7 @@ let package = Package(
             name: "MobileIdSDKiOSWrapper",
             dependencies: [
                 .target(name: "MobileIdSDKiOS"),
-                .product(name: "Sentry", package: "Sentry"),
+                .target(name: "Sentry"),
                 .product(name: "Lottie", package: "Lottie"),
                 .product(name: "VBDependencyInjector", package: "VBDependencyInjector"),
                 .product(name: "VBNetworkClient", package: "VBNetworkClient"),
