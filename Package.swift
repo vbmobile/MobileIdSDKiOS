@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "MobileIdSDKiOS",
-            targets: ["MobileIdSDKiOS"]),
+            targets: ["MobileIdSDKiOSWrapper"]),
     ],
     dependencies: [
         .package(name: "Sentry", url: "https://github.com/getsentry/sentry-cocoa", .exact("8.32.0")),
