@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Sentry", url: "https://github.com/getsentry/sentry-cocoa", .exact("8.32.0")),
-        .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", .exact("4.3.4")),
+        .package(name: "Lottie", url: "https://github.com/airbnb/lottie-spm", .exact("4.3.4")),
         .package(name: "VBDependencyInjector", url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.4")),
         .package(name: "VBNetworkClient", url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.0")),
         .package(name: "VBImageProcessor", url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.1.2")),
