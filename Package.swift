@@ -15,7 +15,7 @@ let package = Package(
             targets: ["MobileIdSDKiOSWrapper"]),
     ],
     dependencies: [
-        .package(name: "Sentry", url: "https://github.com/getsentry/sentry-cocoa", .exact("8.32.0")),
+        .package(name: "sentry-cocoa", url: "https://github.com/getsentry/sentry-cocoa", .exact("8.32.0")),
         .package(name: "Lottie", url: "https://github.com/airbnb/lottie-spm", .exact("4.3.4")),
         .package(name: "VBDependencyInjector", url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.4")),
         .package(name: "VBNetworkClient", url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.0")),
@@ -33,7 +33,7 @@ let package = Package(
             name: "MobileIdSDKiOSWrapper",
             dependencies: [
                 .target(name: "MobileIdSDKiOS"),
-                .product(name: "Sentry", package: "Sentry"),
+                .product(name: "Sentry", package: "sentry-cocoa"),
                 .product(name: "Lottie", package: "Lottie"),
                 .product(name: "VBDependencyInjector", package: "VBDependencyInjector"),
                 .product(name: "VBNetworkClient", package: "VBNetworkClient"),
