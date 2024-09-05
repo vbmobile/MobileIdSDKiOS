@@ -29,11 +29,6 @@ let package = Package(
             checksum: "709e8beedce6029b439e7d4bb59e1830060b642b96791586c65a6520ca5ba908"
         ),
         .binaryTarget(
-            name: "Sentry",
-            url: "https://github.com/getsentry/sentry-cocoa/releases/download/8.36.0/Sentry.xcframework.zip",
-            checksum: "ca2140c6ef4986cd4f4436b23b3bd3cbe582a450fb62a9410efd3085f90be4c5" //Sentry-Static
-        ),
-        .binaryTarget(
             name: "Sentry-Dynamic",
             url: "https://github.com/getsentry/sentry-cocoa/releases/download/8.36.0/Sentry-Dynamic.xcframework.zip",
             checksum: "1990ea055eb3cd1779ef2a63f28ef23039999fc0fcef7d678e1d66bfc52de7e7" //Sentry-Dynamic
@@ -42,7 +37,6 @@ let package = Package(
             name: "MobileIdSDKiOSWrapper",
             dependencies: [
                 .target(name: "MobileIdSDKiOS"),
-                .target(name: "Sentry"),
                 .target(name: "Sentry-Dynamic"),
                 .product(name: "Lottie", package: "Lottie"),
                 .product(name: "VBDependencyInjector", package: "VBDependencyInjector"),
