@@ -30,8 +30,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "Sentry-Dynamic",
-            url: "https://github.com/getsentry/sentry-cocoa/releases/download/8.36.0/Sentry-Dynamic.xcframework.zip",
-            checksum: "1990ea055eb3cd1779ef2a63f28ef23039999fc0fcef7d678e1d66bfc52de7e7" //Sentry-Dynamic
+            url: "https://github.com/getsentry/sentry-cocoa/releases/download/8.32.0/Sentry-Dynamic.xcframework.zip",
+            checksum: "207a09fd95caa9a9731d16dfd04844759ae7b8f8682ea0193ad79e66b257595d" //Sentry-Dynamic
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
