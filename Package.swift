@@ -30,7 +30,7 @@ let package = Package(
         ),
         .binaryTarget(
                     name: "Sentry-Dynamic",
-                    url: "https://github.com/getsentry/sentry-cocoa/releases/download/8.33.0/Sentry-Dynamic.xcframework.zip",
+                    url: "https://github.com/getsentry/sentry-cocoa/releases/download/8.33.0-Deprecated/Sentry-Dynamic.xcframework.zip",
                     checksum: "4ea23fbc25edb599802f41bb00b4c9da38d1137a75ff0f79d72897d46dd451b9" //Sentry-Dynamic
         ),
         .target(
