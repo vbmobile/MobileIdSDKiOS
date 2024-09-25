@@ -25,13 +25,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.2.1.zip",
-            checksum: "709e8beedce6029b439e7d4bb59e1830060b642b96791586c65a6520ca5ba908"
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.2.2.zip",
+            checksum: "0483010f56a619107213c35a494bcfb915a562ad338504e3ef9d5f3c158290bb"
         ),
         .binaryTarget(
-            name: "Sentry-Dynamic",
-            url: "https://github.com/getsentry/sentry-cocoa/releases/download/8.32.0/Sentry-Dynamic.xcframework.zip",
-            checksum: "207a09fd95caa9a9731d16dfd04844759ae7b8f8682ea0193ad79e66b257595d" //Sentry-Dynamic
+                    name: "Sentry-Dynamic",
+                    url: "https://github.com/getsentry/sentry-cocoa/releases/download/8.33.0/Sentry-Dynamic.xcframework.zip",
+                    checksum: "4ea23fbc25edb599802f41bb00b4c9da38d1137a75ff0f79d72897d46dd451b9" //Sentry-Dynamic
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
