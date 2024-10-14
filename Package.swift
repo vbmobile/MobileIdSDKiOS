@@ -26,7 +26,7 @@ let package = Package(
         .binaryTarget(
             name: "MobileIdSDKiOS",
             url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.2.2.zip",
-            checksum: "0483010f56a619107213c35a494bcfb915a562ad338504e3ef9d5f3c158290bb"
+            checksum: "aa3a1fc9720b63bef70d06121f63f9221687f6ba81c59f150e587f81455ba3af"
         ),
         .binaryTarget(
                     name: "Sentry-Dynamic",
