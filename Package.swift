@@ -25,19 +25,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.2.2.zip",
-            checksum: "aa3a1fc9720b63bef70d06121f63f9221687f6ba81c59f150e587f81455ba3af"
-        ),
-        .binaryTarget(
-                    name: "Sentry-Dynamic",
-                    url: "https://github.com/getsentry/sentry-cocoa/releases/download/8.33.0-Deprecated/Sentry-Dynamic.xcframework.zip",
-                    checksum: "4ea23fbc25edb599802f41bb00b4c9da38d1137a75ff0f79d72897d46dd451b9" //Sentry-Dynamic
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.3.0.zip",
+            checksum: "0fa3da40f0f64eb00118515082fc33d3ef62939cea10f43effaa8cb60fd3579c"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
             dependencies: [
                 .target(name: "MobileIdSDKiOS"),
-                .target(name: "Sentry-Dynamic"),
                 .product(name: "Lottie", package: "Lottie"),
                 .product(name: "VBDependencyInjector", package: "VBDependencyInjector"),
                 .product(name: "VBNetworkClient", package: "VBNetworkClient"),
