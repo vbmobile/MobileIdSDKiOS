@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Lottie", url: "https://github.com/airbnb/lottie-spm", .exact("4.3.4")),
-        .package(name: "VBDependencyInjector", url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.4")),
+        .package(name: "VBDependencyInjector", url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.5")),
         .package(name: "VBNetworkClient", url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.0")),
         .package(name: "VBImageProcessor", url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.1.2")),
         .package(name: "OCRRFID", url: "https://github.com/regulaforensics/DocumentReaderOCRRFID-Swift-Package", from: "7.4.0"),
@@ -25,8 +25,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.3.0.zip",
-            checksum: "2a589b5fc3aec241d7c1fd106f237ac5ebe8e7ba592b618b14a5c3664c6d315e"
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.3.1.zip",
+            checksum: "a7c04f01ef23801071d518c016b0ae8d1084992dd582b20d7b1111e5f2f2e65e"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
