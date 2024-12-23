@@ -17,16 +17,15 @@ let package = Package(
     dependencies: [
         .package(name: "Lottie", url: "https://github.com/airbnb/lottie-spm", .exact("4.4.1")),
         .package(name: "VBDependencyInjector", url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.5")),
-        .package(name: "VBNetworkClient", url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.0")),
-        .package(name: "VBImageProcessor", url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.1.2")),
-        .package(name: "OCRRFID", url: "https://github.com/regulaforensics/DocumentReaderOCRRFID-Swift-Package", from: "7.4.0"),
-        .package(name: "DocumentReader", url: "https://github.com/regulaforensics/DocumentReader-Swift-Package", from: "7.4.0"),
+        .package(name: "VBNetworkClient", url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.1")),
+        .package(name: "VBImageProcessor", url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.1.3")),
+        .package(name: "VBUtils", url: "https://github.com/vbmobile/VBUtils", .exact("1.0.0")),
     ],
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.3.2.zip",
-            checksum: "ec5f5e3b4eeafba876408da5e6dfedbcc918a31143e4faaab7cecd662f258c9a"
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-8.0.0.zip",
+            checksum: "fa0f05b886aa8229dc7c6494fc16453486392854972b05e04523b8084752937b"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
@@ -36,8 +35,7 @@ let package = Package(
                 .product(name: "VBDependencyInjector", package: "VBDependencyInjector"),
                 .product(name: "VBNetworkClient", package: "VBNetworkClient"),
                 .product(name: "VBImageProcessor", package: "VBImageProcessor"),
-                .product(name: "OCRRFID", package: "OCRRFID"),
-                .product(name: "DocumentReader", package: "DocumentReader")
+                .product(name: "VBUtils", package: "VBUtils")
             ],
             path: "Sources",
             sources: ["dummy.swift"]
