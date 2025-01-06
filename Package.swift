@@ -17,15 +17,16 @@ let package = Package(
     dependencies: [
         .package(name: "Lottie", url: "https://github.com/airbnb/lottie-spm", .exact("4.4.1")),
         .package(name: "VBDependencyInjector", url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.5")),
-        .package(name: "VBNetworkClient", url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.1")),
-        .package(name: "VBImageProcessor", url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.1.3")),
-        .package(name: "VBUtils", url: "https://github.com/vbmobile/VBUtils", .exact("1.0.0")),
+        .package(name: "VBNetworkClient", url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.0")),
+        .package(name: "VBImageProcessor", url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.1.2")),
+        .package(name: "OCRRFID", url: "https://github.com/regulaforensics/DocumentReaderOCRRFID-Swift-Package", from: "7.5.0"),
+        .package(name: "DocumentReader", url: "https://github.com/regulaforensics/DocumentReader-Swift-Package", from: "7.5.0"),
     ],
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-8.0.0.zip",
-            checksum: "fa0f05b886aa8229dc7c6494fc16453486392854972b05e04523b8084752937b"
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.3.3.zip",
+            checksum: "32f9f614841c629a83cd49467787f08320fc2a592b6c107a05f60a98138e4620"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
@@ -35,7 +36,8 @@ let package = Package(
                 .product(name: "VBDependencyInjector", package: "VBDependencyInjector"),
                 .product(name: "VBNetworkClient", package: "VBNetworkClient"),
                 .product(name: "VBImageProcessor", package: "VBImageProcessor"),
-                .product(name: "VBUtils", package: "VBUtils")
+                .product(name: "OCRRFID", package: "OCRRFID"),
+                .product(name: "DocumentReader", package: "DocumentReader")
             ],
             path: "Sources",
             sources: ["dummy.swift"]
