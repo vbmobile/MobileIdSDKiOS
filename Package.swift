@@ -18,15 +18,15 @@ let package = Package(
         .package(name: "Lottie", url: "https://github.com/airbnb/lottie-spm", .exact("4.4.1")),
         .package(name: "VBDependencyInjector", url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.5")),
         .package(name: "VBNetworkClient", url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.0")),
-        .package(name: "VBImageProcessor", url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.1.2")),
+        .package(name: "VBImageProcessor", url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.1.4")),
         .package(name: "OCRRFID", url: "https://github.com/regulaforensics/DocumentReaderOCRRFID-Swift-Package", from: "7.5.0"),
         .package(name: "DocumentReader", url: "https://github.com/regulaforensics/DocumentReader-Swift-Package", from: "7.5.0"),
     ],
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.3.3.zip",
-            checksum: "32f9f614841c629a83cd49467787f08320fc2a592b6c107a05f60a98138e4620"
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.3.4.zip",
+            checksum: "83f6920babdf4bf807acbabd1b9e6a0c8d1a2ef921c01249f01c03e37c6c52d4"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
