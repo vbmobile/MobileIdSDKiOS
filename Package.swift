@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "MobileIdSDKiOS",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v13)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
@@ -15,29 +15,30 @@ let package = Package(
             targets: ["MobileIdSDKiOSWrapper"]),
     ],
     dependencies: [
-        .package(name: "Lottie", url: "https://github.com/airbnb/lottie-spm", .exact("4.4.1")),
-        .package(name: "VBDependencyInjector", url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.5")),
-        .package(name: "VBNetworkClient", url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.0")),
-        .package(name: "VBImageProcessor", url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.1.4")),
-        .package(name: "OCRRFID", url: "https://github.com/regulaforensics/DocumentReaderOCRRFID-Swift-Package", from: "7.5.0"),
-        .package(name: "DocumentReader", url: "https://github.com/regulaforensics/DocumentReader-Swift-Package", from: "7.5.0"),
+        .package(url: "https://github.com/airbnb/lottie-spm", .exact("4.4.1")),
+        .package(url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.5")),
+        .package(url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.1")),
+        .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.2.0")),
+        .package(url: "https://github.com/vbmobile/VBUtils", .exact("2.0.0")),
+        .package(url: "https://github.com/matomo-org/matomo-sdk-ios.git", .upToNextMinor(from: "7.7.0")),
+
     ],
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-7.3.5.zip",
-            checksum: "504de632b641acff0a1309d5a3edd7e94684e31c60ffc5959296d910ae7afc0c"
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-8.1.0.zip",
+            checksum: "e531f9a3465d60baa6eb75e86d4e13622fb7a67efddc7e7a500214b1a6d3f6c8"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
             dependencies: [
                 .target(name: "MobileIdSDKiOS"),
-                .product(name: "Lottie", package: "Lottie"),
+                .product(name: "Lottie", package: "lottie-spm"),
                 .product(name: "VBDependencyInjector", package: "VBDependencyInjector"),
                 .product(name: "VBNetworkClient", package: "VBNetworkClient"),
                 .product(name: "VBImageProcessor", package: "VBImageProcessor"),
-                .product(name: "OCRRFID", package: "OCRRFID"),
-                .product(name: "DocumentReader", package: "DocumentReader")
+                .product(name: "MatomoTracker", package: "matomo-sdk-ios"),
+                .product(name: "VBUtils", package: "VBUtils")
             ],
             path: "Sources",
             sources: ["dummy.swift"]
