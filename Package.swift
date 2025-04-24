@@ -20,8 +20,7 @@ let package = Package(
         .package(url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.1")),
         .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.2.0")),
         .package(url: "https://github.com/vbmobile/VBUtils", .exact("2.0.0")),
-        .package(url: "https://github.com/matomo-org/matomo-sdk-ios.git", .upToNextMinor(from: "7.7.0")),
-
+        .package(url: "https://github.com/vbmobile/matomo-sdk-ios", .exact("7.7.0")),
     ],
     targets: [
         .binaryTarget(
