@@ -12,22 +12,21 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "MobileIdSDKiOS",
-            type: .dynamic,
             targets: ["MobileIdSDKiOSWrapper"]),
     ],
     dependencies: [
         .package(url: "https://github.com/airbnb/lottie-spm", .exact("4.4.1")),
         .package(url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.5")),
         .package(url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.1")),
-        .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.2.0")),
-        .package(url: "https://github.com/vbmobile/VBUtils", .exact("2.0.0")),
+        .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.2.1")),
+        .package(url: "https://github.com/vbmobile/VBUtils", .exact("2.0.1")),
         .package(url: "https://github.com/vbmobile/matomo-sdk-ios", .exact("7.7.0")),
     ],
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-8.1.0.zip",
-            checksum: "e531f9a3465d60baa6eb75e86d4e13622fb7a67efddc7e7a500214b1a6d3f6c8"
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-8.1.1.zip",
+            checksum: "f43a1524d8cbbebe8952ff14e4edf6c91e091e6b33dc659ad2190ed7ed72c7f4"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
