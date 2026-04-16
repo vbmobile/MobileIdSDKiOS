@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "MobileIdSDKiOS",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
@@ -16,17 +16,18 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/airbnb/lottie-spm", .exact("4.4.1")),
-        .package(url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.5")),
+        .package(url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.7")),
         .package(url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.1")),
         .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.2.2")),
         .package(url: "https://github.com/vbmobile/VBUtils", .exact("2.0.2")),
         .package(url: "https://github.com/vbmobile/matomo-sdk-ios", .exact("7.7.0")),
+        .package(url: "https://github.com/vbmobile/AMADocModeliOS", exact: "1.0.0-rc24"),
     ],
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-8.1.7.zip",
-            checksum: "4b506aedb004e8c5537b37850b1b75331060a9c7f0755cf83ed148d349842f42"
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-9.0.0-rc1.zip",
+            checksum: "9d2887570a230cfced04424adcd45c91a884d2b336086de996d605da2537470b"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
@@ -37,7 +38,8 @@ let package = Package(
                 .product(name: "VBNetworkClient", package: "VBNetworkClient"),
                 .product(name: "VBImageProcessor", package: "VBImageProcessor"),
                 .product(name: "MatomoTracker", package: "matomo-sdk-ios"),
-                .product(name: "VBUtils", package: "VBUtils")
+                .product(name: "VBUtils", package: "VBUtils"),
+                .product(name: "AMADocModeliOS", package: "AMADocModeliOS")
             ],
             path: "Sources",
             sources: ["dummy.swift"]
