@@ -21,13 +21,14 @@ let package = Package(
         .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.2.2")),
         .package(url: "https://github.com/vbmobile/VBUtils", .exact("2.0.2")),
         .package(url: "https://github.com/vbmobile/matomo-sdk-ios", .exact("7.7.0")),
-        .package(url: "https://github.com/vbmobile/AMADocModeliOS", exact: "1.0.0-rc24"),
+        .package(url: "https://github.com/vbmobile/AMADocModeliOS",
+                 .upToNextMinor(from: "1.0.0")),
     ],
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-9.0.0-rc1.zip",
-            checksum: "9d2887570a230cfced04424adcd45c91a884d2b336086de996d605da2537470b"
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-9.1.0.zip",
+            checksum: "36d1127c31e1ef659b199c5c1f2ec64a0cecd8276edd4f97003ed7768c644fa1"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
