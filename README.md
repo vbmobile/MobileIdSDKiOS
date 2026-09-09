@@ -4,7 +4,7 @@ SeamlessMobile SDK allows to easily integrate essential features like MRZ scanni
 
 ## How to Install
 
-1. In Xcode, naviate to File > Add Package Dependencies.
+1. In Xcode, navigate to File > Add Package Dependencies.
 2. In the prompt that appears, enter the package URL:
 
 ```
@@ -19,7 +19,9 @@ Once you're finished, Xcode will begin downloading and resolving dependencies.
 
 ## Migration from CocoaPods to SPM
 
-If migrating from a CocoaPods-based project, run `pod deintegrate` to remove CocoaPods from your Xcode project. The CocoaPods-generated .xcworkspace file can safely be deleted afterward. 
+SeamlessMobile SDK no longer publishes new versions through CocoaPods. Previously published pod versions remain available, but migrate to Swift Package Manager to receive future SDK updates. This change also prepares integrations for [CocoaPods Trunk becoming permanently read-only on December 2, 2026](https://blog.cocoapods.org/).
+
+If migrating from a CocoaPods-based project, run `pod deintegrate` to remove CocoaPods from your Xcode project. The CocoaPods-generated `.xcworkspace` file can safely be deleted afterward.
 
 If you're adding SeamlessMobile SDK Swift Packages to a project for the first time, ignore this notice.
 
