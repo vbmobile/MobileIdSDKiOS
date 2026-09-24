@@ -19,16 +19,15 @@ let package = Package(
         .package(url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.7")),
         .package(url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.1")),
         .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.2.2")),
-        .package(url: "https://github.com/vbmobile/VBUtils", .exact("2.0.2")),
-        .package(url: "https://github.com/vbmobile/matomo-sdk-ios", .exact("7.7.0")),
+        .package(url: "https://github.com/vbmobile/VBUtils", .exact("2.0.3")),
         .package(url: "https://github.com/vbmobile/AMADocModeliOS",
                  .upToNextMinor(from: "2.0.3")),
     ],
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-9.2.3.zip",
-            checksum: "5dd2125275e65fb0ed1a237532ee8389cd3acc6bc598bd86a107bab048fb21f1"
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-9.2.4.zip",
+            checksum: "CHECKSUM_TBD"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
@@ -38,7 +37,6 @@ let package = Package(
                 .product(name: "VBDependencyInjector", package: "VBDependencyInjector"),
                 .product(name: "VBNetworkClient", package: "VBNetworkClient"),
                 .product(name: "VBImageProcessor", package: "VBImageProcessor"),
-                .product(name: "MatomoTracker", package: "matomo-sdk-ios"),
                 .product(name: "VBUtils", package: "VBUtils"),
                 .product(name: "AMADocModeliOS", package: "AMADocModeliOS")
             ],
