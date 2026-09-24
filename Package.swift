@@ -18,7 +18,7 @@ let package = Package(
         .package(url: "https://github.com/airbnb/lottie-spm", .exact("4.4.1")),
         .package(url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.7")),
         .package(url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.1")),
-        .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.2.2")),
+        .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.2.3")),
         .package(url: "https://github.com/vbmobile/VBUtils", .exact("2.0.3")),
         .package(url: "https://github.com/vbmobile/AMADocModeliOS",
                  .upToNextMinor(from: "2.0.3")),
