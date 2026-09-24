@@ -27,7 +27,7 @@ let package = Package(
         .binaryTarget(
             name: "MobileIdSDKiOS",
             url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-9.2.4.zip",
-            checksum: "CHECKSUM_TBD"
+            checksum: "acf3ae2c359db8aead14f7ba6d1c142a2323c3f55ea19482c73c274213b5b20f"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
