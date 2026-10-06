@@ -18,7 +18,7 @@ let package = Package(
         .package(url: "https://github.com/airbnb/lottie-spm", .exact("4.4.1")),
         .package(url: "https://github.com/vbmobile/VBDependencyInjector", .exact("1.0.7")),
         .package(url: "https://github.com/vbmobile/VBNetworkClient", .exact("5.1.1")),
-        .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.2.3")),
+        .package(url: "https://github.com/vbmobile/VBImageProcessor", .exact("1.2.4")),
         .package(url: "https://github.com/vbmobile/VBUtils", .exact("2.0.3")),
         .package(url: "https://github.com/vbmobile/AMADocModeliOS",
                  .upToNextMinor(from: "2.0.3")),
@@ -26,8 +26,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MobileIdSDKiOS",
-            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-9.2.6.zip",
-            checksum: "30d7acaff489a6682cf2d0394cb47f4648e5e607e5df0d1b50c08ad2d1233b1e"
+            url: "https://vbmobileidstorage.blob.core.windows.net/ios/MobileIdSDKiOS/MobileIdSDKiOS/MobileIdSDKiOS-9.2.7.zip",
+            checksum: "4106e1c1147b50b9bb2977a2ffea7c8f8622ac5dcbd9fa9254a0401d26e42d2a"
         ),
         .target(
             name: "MobileIdSDKiOSWrapper",
